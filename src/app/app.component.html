@@ -1,0 +1,215 @@
+<main >
+  <div class="row" >
+    <div class="person_cart col-6" *ngFor="let person of people; let i=index">
+      <div class="row">
+        <div class="person_cart_main col-21">
+          <div class="row">
+            <div class="col-9 person_img">
+
+              <img [src]="person.img" alt="person img" onError="this.src='assets/people/undefined.png';">
+
+              <div class="person_cart_position col-12">{{person.position}}</div>
+
+            </div>
+            <div class="col-14 person_info" >
+              <div class="name">
+                <div>{{person.full_name}}</div>
+              </div>
+              <div class="location">
+                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"> {{person.location}}</span>
+              </div>
+              <div class="company">
+                {{person.company}}
+              </div>
+              <div class="address_street">
+                {{person.address_street}}
+              </div>
+              <div class="address_city">
+                {{person.address_city}}
+              </div>
+              <div class="phone">
+                {{person.phone}}
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="person_cart_manage col-3">
+          <div class="person_cart_manage_icon">
+            <div class="row">
+              <div class="col-6 pencil"><span class="glyphicon glyphicon-pencil" aria-hidden="true" (click)="editPerson(person._id)"></span></div>
+              <div class="col-6 trush"><span class="glyphicon glyphicon-trash" aria-hidden="true" (click)="deletePerson(person._id)"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-4">
+     <div class="button_add_person">
+
+         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true" (click)="addPerson()"></span>
+
+
+     </div>
+    </div>
+  </div>
+  <div class="pop_up_menu" *ngIf="toggle==true">
+    <div class="menu">
+      <div class="close_popup" >
+        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true" (click)="onClosePopUp()"></span>
+      </div>
+   <div class="title">
+
+     <h3 *ngIf="addPersonToggle==false">Edit Person</h3>
+     <h3 *ngIf="addPersonToggle==true">Add Person</h3>
+   </div>
+
+      <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+        <div class="row" >
+          <div class="col-offset-6"></div>
+          <div class="col-12">
+            <div class="form-group">
+              <label for="personName">Full name</label>
+              <input
+                type="text"
+                id="personName"
+                class="form-control"
+                formControlName="full_name"
+              >
+              <span *ngIf="personForm.get('full_name').errors" class="form-required">This field is required! And Title requires capital letter </span>
+            </div>
+          </div>
+          <div class="col-offset-6"></div>
+        </div>
+        <div class="row" >
+          <div class="col-offset-6"></div>
+          <div class="col-12">
+            <div class="form-group">
+              <label for="personPosition">Position</label>
+              <input
+                type="text"
+                id="personPosition"
+                class="form-control"
+                formControlName="position"
+              >
+              <span *ngIf="personForm.get('position').errors" class="form-required">This field is required!  </span>
+            </div>
+          </div>
+          <div class="col-offset-6"></div>
+        </div>
+        <div class="row" >
+          <div class="col-offset-6"></div>
+          <div class="col-12">
+            <div class="form-group">
+              <label for="personCompany">Company</label>
+              <input
+                type="text"
+                id="personCompany"
+                class="form-control"
+                formControlName="company"
+              >
+              <span *ngIf="personForm.get('company').errors" class="form-required">This field is required!  </span>
+            </div>
+          </div>
+          <div class="col-offset-6"></div>
+        </div>
+        <div class="row" style="display: none">
+          <div class="col-offset-6"></div>
+          <div class="col-12">
+            <div class="form-group">
+              <label for="personLocation">Location</label>
+              <input
+                type="text"
+                id="personLocation"
+                class="form-control"
+                formControlName="location"
+              >
+              <span *ngIf="personForm.get('location').errors" class="form-required">This field is required!  </span>
+            </div>
+          </div>
+          <div class="col-offset-6"></div>
+        </div>
+        <div class="row" >
+          <div class="col-offset-6"></div>
+          <div class="col-12">
+            <div class="form-group">
+              <label for="personPosition">Address Street</label>
+              <input
+                type="text"
+                id="personAddressStreet"
+                class="form-control"
+                formControlName="address_street"
+              >
+              <span *ngIf="personForm.get('address_street').errors" class="form-required">This field is required!  </span>
+            </div>
+          </div>
+          <div class="col-offset-6"></div>
+        </div>
+        <div class="row" >
+          <div class="col-offset-6"></div>
+          <div class="col-12">
+            <div class="form-group">
+              <label for="personPosition">Address Street</label>
+              <input
+                type="text"
+                id="personAddressCity"
+                class="form-control"
+                formControlName="address_city"
+              >
+              <span *ngIf="personForm.get('address_city').errors" class="form-required">This field is required!  </span>
+            </div>
+          </div>
+          <div class="col-offset-6"></div>
+        </div>
+        <div class="row" >
+          <div class="col-offset-6"></div>
+          <div class="col-12">
+            <div class="form-group">
+              <label for="personPosition">Phone</label>
+              <input
+                type="tel"
+                id="personPhone"
+                class="form-control"
+                formControlName="phone"
+                placeholder="(xxx) xxx-xxxx"
+              >
+              <span *ngIf="personForm.get('phone').errors" class="form-required">This field is required!  </span>
+            </div>
+          </div>
+          <div class="col-offset-6"></div>
+        </div>
+        <div class="row" >
+          <div class="col-offset-6"></div>
+          <div class="col-12">
+            <div class="form-group">
+              <label for="personPosition">Picture</label>
+              <input
+                type="text"
+                id="personImg"
+                class="form-control"
+                formControlName="img"
+              >
+
+            </div>
+          </div>
+          <div class="col-offset-6"></div>
+        </div>
+        <div class="row">
+          <div class="col-offset-10"></div>
+          <div class="col-4">
+            <button class="btn btn-success" type="submit"   *ngIf="addPersonToggle==false">Save</button>
+            <button class="btn btn-info" type="submit"   *ngIf="addPersonToggle==true">Add Person</button>
+          </div>
+          <div class="col-offset-10"></div>
+          </div>
+      </form>
+
+
+    </div>
+
+  </div>
+
+
+</main>

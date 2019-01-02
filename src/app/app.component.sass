@@ -1,0 +1,176 @@
+@import "../sass/bootstrap-sass/variables"
+@import "../sass/variables-custom"
+@import "../sass/grid"
+
+
+main
+  margin: 10vh 0vw 10vh  0vw
+  color: $third-color-font
+
+  @media screen and (max-width: $break-small)
+    margin: 2vh 0vw 10vh 0vw
+  .row
+    margin: 0
+    padding: 0
+
+  font-size: $font-size-base*0.5
+  .row
+    .person_cart
+      margin: $margin-base/5
+      width: $cart-size
+      height: $cart-size/3
+      background-color: white
+      margin: $margin-base/4.5
+      @media screen and (max-width: $break-small)
+        width: 80vw
+        height: 12vh
+        margin: 2vh 2vw 0vh 10vw
+      .person_cart_main
+        overflow: hidden
+        height: $cart-size/2.5
+        @media screen and (max-width: $break-small)
+          height: 15vh
+
+        .person_img
+          margin-top: $margin-base/10
+          img
+            width: $cart-size*0.25
+            height: auto
+            border-radius: 50%
+            margin: $margin-base/10
+            @media screen and (max-width: $break-small)
+              width: $cart-size*0.45
+              height: auto
+              border-radius: 50%
+              margin: 0 0 0 2vw
+        .person_cart_position
+          text-align: center
+          color: $primary-color-font
+          font-size: $font-size-base
+          @media screen and (max-width: $break-small)
+            font-size: $font-size-base*2
+        .person_info
+          margin-top: 0
+          padding: 0 $margin-base/10 0 $margin-base/10
+          width: 300px
+          height: 100%
+          font-size: $font-size-base*0.8
+          @media screen and (max-width: $break-small)
+            margin-top: 0
+            padding-top: 0
+
+          .name
+            div
+            color: $primary-color-font
+            font-size: $font-size-base*2
+            @media screen and (max-width: $break-small)
+              font-size: $font-size-base*5
+              margin-top: 0
+              margin-bottom: 0
+          .location
+            @media screen and (max-width: $break-small)
+              font-size: $font-size-base*2
+              margin-top: 0
+          .company
+            color: $primary-color-font
+            margin-top: $margin-base/10
+            font-weight: bold
+            font-size: $font-size-base
+            @media screen and (max-width: $break-small)
+             margin-top: 0.5vh
+             font-size: $font-size-base*3
+          .address_street, .address_city, .phone
+            margin-top: 0
+            padding-top: 0
+            font-size: $font-size-base*0.9
+            @media screen and (max-width: $break-small)
+             font-size: $font-size-base*2
+
+      .person_cart_manage
+
+      .person_cart_position
+        font-weight: bold
+
+        height: $cart-size/2.5*0.10
+  .person_cart_manage
+
+
+    .person_cart_manage_icon
+      cursor: pointer
+      width: 100%
+      padding-top: $cart-size/3.4
+      margin-right: $margin-base/10
+      padding-bottom: $margin-base/10
+      font-size: $font-size-base*0.8
+      color: $primary-color-font
+      @media screen and (max-width: $break-small)
+        font-size: $font-size-base*3
+        padding-top: 9vh
+      .glyphicon
+        text-align: center
+        margin-left: $margin-base/10
+
+
+
+  .pop_up_menu
+      position: absolute
+      background-color: rgba(42, 42, 42, 0.77)
+      width: 100vw
+      height: 100vh
+      top: 0
+      overflow: hidden
+      @media screen and (max-width: $break-small)
+        height: auto
+      .menu
+        width: 50vw
+        height: auto
+        padding-bottom: $margin-base/5
+        margin-left: 25vw
+        margin-top: 15vh
+        background-color: white
+        @media screen and (max-width: $break-small)
+          width: 90vw
+          height: auto
+          margin-left: 5vw
+          margin-top: 5vh
+          margin-bottom: 10vh
+        .close_popup
+          font-size: $font-size-base*2
+          margin-left: 90%
+          padding-top: 2%
+          @media screen and (max-width: $break-small)
+            font-size: 2vh
+            margin-left: 80vw
+            padding-top: 2vh
+        label
+          font-size: $font-size-base
+          @media screen and (max-width: $break-small)
+            font-size: $font-size-base*5
+        .title
+          width: 100%
+          padding-top: $margin-base/4
+          text-align: center
+          color: $primary-color-cart
+
+  .button_add_person
+    width: $cart-size
+    height: $cart-size/3
+    margin-left: $cart-size/3
+    margin-top: $cart-size/8
+    @media screen and (max-width: $break-small)
+      margin-left: 42vw
+    .glyphicon
+      font-size: $font-size-base*5
+      transform: rotate(45deg)
+      color: green
+      @media screen and (max-width: $break-small)
+        font-size: $font-size-base*10
+
+
+
+.form-required
+  @media screen and (max-width: $break-small)
+    font-size: $font-size-base*2
+    color: red
+
+

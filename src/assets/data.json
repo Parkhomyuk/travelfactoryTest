@@ -1,0 +1,93 @@
+{
+  "peoples":[
+    {
+      "_id": 1,
+      "full_name": "Jhon Smith",
+      "location": {"lat": 48.856614, "lng": 2.3522219},
+      "company": "Twitter, Inc.",
+      "position": "Graphics designer",
+      "address_street": "795 Folsom Ave, Suite 600",
+      "address_city": "San Francisco, CA94107",
+      "phone": "(123) 456-7890",
+      "img": "assets/people/john-smith.jpg"
+    },
+    {
+      "_id": 2,
+      "full_name": "Alex Johnatan",
+      "location": {"lat": 45.856614, "lng": 2.3522219},
+      "company": "Twitter, Inc.",
+      "position": "CEO",
+      "address_street": "795 Folsom Ave, Suite 600",
+      "address_city": "San Francisco, CA94107",
+      "phone": "(123) 456-7890",
+      "img": "assets/people/alex jonathan.jpg"
+    },
+    {
+      "_id": 3,
+      "full_name": "Monica Smith",
+      "location": {"lat": 48.856614, "lng": 2.3522219},
+      "company": "Twitter, Inc.",
+      "position": "Marketing Manager",
+      "address_street": "795 Folsom Ave, Suite 600",
+      "address_city": "San Francisco, CA94107",
+      "phone": "(123) 456-7890",
+      "img": "assets/people/monica smith.jpg"
+    },
+    {
+      "_id": 4,
+      "full_name": "Michael Zimber",
+      "location":{"lat": 48.856614, "lng": 2.3522219},
+      "company": "Twitter, Inc.",
+      "position": "Seles Manager",
+      "address_street": "795 Folsom Ave, Suite 600",
+      "address_city": "San Francisco, CA94107",
+      "phone": "(123) 456-7890",
+      "img": "assets/people/michael zimber.jpg"
+    },
+    {
+      "_id": 5,
+      "full_name": "Sandra Smith",
+      "location": {"lat": 48.856614, "lng": 2.3522219},
+      "company": "Twitter, Inc.",
+      "position": "Graphics designer",
+      "address_street": "795 Folsom Ave, Suite 600",
+      "address_city": "San Francisco, CA94107",
+      "phone": "(123) 456-7890",
+      "img": "assets/people/sandra smith.jpg"
+    },
+    {
+      "_id": 6,
+      "full_name": "Janet Carton",
+      "location": {"lat": 48.856614, "lng": 2.3522219},
+      "company": "Twitter, Inc.",
+      "position": "Graphics designer",
+      "address_street": "795 Folsom Ave, Suite 600",
+      "address_city": "San Francisco, CA94107",
+      "phone": "(123) 456-7890",
+      "img": "assets/people/janeth carton.jpg"
+    },
+    {
+      "_id": 7,
+      "full_name": "Alex Johnatan",
+      "location": {"lat": 48.856614, "lng": 2.3522219},
+      "company": "Twitter, Inc.",
+      "position": "CEO",
+      "address_street": "795 Folsom Ave, Suite 600",
+      "address_city": "San Francisco, CA94107",
+      "phone": "(123) 456-7890",
+      "img": "assets/people/alex jonathan.jpg"
+    },
+    {
+      "_id": 8,
+      "full_name": "Jhon Smith",
+      "location": {"lat": 48.856614, "lng": 2.3522219},
+      "company": "Twitter, Inc.",
+      "position": "Graphics designer",
+      "address_street": "795 Folsom Ave, Suite 600",
+      "address_city": "San Francisco, CA94107",
+      "phone": "(123) 456-7890",
+      "img": "assets/people/john-smith.jpg"
+    }
+
+
+    ]}
